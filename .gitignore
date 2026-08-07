@@ -1,0 +1,89 @@
+# =========================
+# Python
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+.conda/
+
+# =========================
+# Environment variables / Secrets
+# =========================
+
+.env
+.env.*
+
+# Database credentials
+*.ini
+*.cfg
+config.py
+
+
+# =========================
+# Jupyter
+# =========================
+
+.ipynb_checkpoints/
+
+
+# =========================
+# Data
+# =========================
+
+# Raw API data
+data/raw/
+
+# Processed/generated datasets
+data/processed/
+
+# Exports
+data/exports/
+
+
+# =========================
+# Machine Learning
+# =========================
+
+# Trained models
+models/*.pkl
+models/*.joblib
+
+# Keep metadata if useful
+!models/metadata.json
+
+
+# =========================
+# Logs
+# =========================
+
+logs/
+*.log
+
+
+# =========================
+# VS Code
+# =========================
+
+.vscode/
+
+
+# =========================
+# Operating System
+# =========================
+
+.DS_Store
+Thumbs.db
+
+
+# =========================
+# Temporary files
+# =========================
+
+*.tmp
+*.temp

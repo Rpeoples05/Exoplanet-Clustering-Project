@@ -1,10 +1,12 @@
 import pandas as pd
-from etl.nasa_data import fetch_exoplanet_data
+from nasa_data import fetch_exoplanet_data
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+PLANET_PATH = BASE_DIR / 'data' / 'raw' / 'raw_planet_data.csv'
+STAR_PATH = BASE_DIR / 'data' / 'raw' / 'raw_star_data.csv'
 
 DATA = fetch_exoplanet_data()
-
-def save_raw_data():
-    DATA.to_csv('../data/raw_exoplanet_data.csv', index=False)
 
 def load_planet_data():
     planet_data = DATA[[
@@ -41,6 +43,8 @@ def load_planet_data():
         'dec'
     ]
 
+    planet_data.to_csv(PLANET_PATH, index=False)
+
     return planet_data
 
 def load_star_data():
@@ -65,5 +69,7 @@ def load_star_data():
         'star_surface_gravity',
         'star_age'
     ]
+
+    star_data.to_csv(STAR_PATH, index=False)
 
     return star_data
