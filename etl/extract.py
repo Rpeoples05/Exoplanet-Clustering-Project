@@ -1,12 +1,9 @@
 import pandas as pd
-from etl.nasa_data import fetch_exoplanet_data
 from pathlib import Path
 from src.config import RAW_PLANET_PATH, RAW_STAR_PATH
 
-DATA = fetch_exoplanet_data()
-
-def load_planet_data():
-    planet_data = DATA[[
+def load_planet_data(nasa_data):
+    planet_data = nasa_data[[
         'pl_name',
         'hostname',
         'sy_pnum',
@@ -44,8 +41,8 @@ def load_planet_data():
     
     return planet_data
 
-def load_star_data():
-    star_data = DATA[[
+def load_star_data(nasa_data):
+    star_data = nasa_data[[
         'hostname',
         'st_spectype',
         'st_teff',

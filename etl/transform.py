@@ -1,16 +1,7 @@
-import pandas as pd
-from etl.extract import load_planet_data, load_star_data
 from src.config import CLEAN_PLANET_PATH, CLEAN_STAR_PATH
+import pandas as pd
 
-def load_data():
-    planet_data = load_planet_data()
-    star_data = load_star_data()
-
-    return planet_data, star_data
-
-def clean_data():
-    planet_data, star_data = load_data()
-
+def clean_data(planet_data, star_data):
     # Clean planet data
     planet_data = planet_data.drop(columns=['eccentricity'])
     planet_data = planet_data[planet_data.notna().all(axis=1)]
@@ -28,5 +19,3 @@ def clean_data():
     star_data.to_csv(CLEAN_STAR_PATH, index=False)
     
     return planet_data, star_data
-
-clean_data()
