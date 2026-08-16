@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS exoplanets (
     radius_jupiters DECIMAL(10, 2),
     density DECIMAL(10, 2),
     equilibrium_temperature DECIMAL(10, 2),
-    orbital_period DECIMAL(10, 2),
+    orbital_period DOUBLE,
     semi_major_axis DECIMAL(10, 2),
     ra DECIMAL(10, 6),
     dec_ DECIMAL(10, 6),

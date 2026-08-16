@@ -5,6 +5,7 @@ def clean_data(planet_data, star_data):
     # Clean planet data
     planet_data = planet_data.drop(columns=['eccentricity'])
     planet_data = planet_data[planet_data.notna().all(axis=1)]
+    planet_data = planet_data.rename(columns={"dec": "dec_"})
 
     #Clean star data
     star_data = star_data[star_data['star_name'].isin(planet_data['star_name'])]

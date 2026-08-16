@@ -1,4 +1,4 @@
-planet_name,star_name,planets_in_system,orbital_period,semi_major_axis,radius_earths,mass_earths,radius_jupiters,mass_jupiters,density,equilibrium_temperature,ra,dec
+planet_name,star_name,planets_in_system,orbital_period,semi_major_axis,radius_earths,mass_earths,radius_jupiters,mass_jupiters,density,equilibrium_temperature,ra,dec_
 HD 80653 b,HD 80653,2,0.71957926,0.01657,1.621,5.61,0.14461618,0.01765103,7.24,2438.0,140.3390845,14.3678691
 K2-312 c,HD 80653,2,871.32,1.882,12.8,1681.31227303,1.14,5.29,4.41,229.0,140.3390845,14.3678691
 XO-2 S d,XO-2 S,4,4696.0,5.46,13.0,1179.14338997,1.16,3.71,2.95,110.98,117.0309753,50.2169068
